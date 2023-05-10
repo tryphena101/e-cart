@@ -1,0 +1,93 @@
+@font-face {
+font-family: "RightGrotesk";
+src: local("RightGrotesk-CompactBlack"),
+ url("./components/fonts/RightGrotesk/RightGrotesk-CompactBlack.otf") format("OpenType");
+font-weight: bold;
+}
+
+/* Navigation */
+
+.App-nav {
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+}
+
+.nav-box {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+
+  background: #FFA900;
+  border-bottom: 1px solid #FF4100;
+}
+
+.font-face-rg {
+ font-family: "RightGrotesk";
+}
+
+.text-style {
+
+  /* shadow_header */
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFA900;
+
+  /* SHIRTS */
+  -webkit-text-stroke: 2px #FF4100;
+  /* border: 2px solid #FF4100; */
+  /* SHADOW */
+
+  text-shadow: 3px 3px 0px #FF4100;
+  }
+
+  .hypdshirts {
+    position: absolute;
+    width: 236px;
+    height: 58px;
+    left: 22px;
+    top: 0px;
+  }
+
+  .active {
+    text-decoration: none;
+    color: inherit;
+    -webkit-text-stroke: inherit;
+  }
+
+  .shop {
+    position: absolute;
+    width: 102px;
+    height: 58px;
+    left: 1250px;
+    top: 0px;
+  }
+
+  .shop-active {
+    text-decoration: none;
+    color: inherit;
+    -webkit-text-stroke: inherit;
+  }
+
+
+  .cart {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 1382px;
+    top: 13px;
+  }
