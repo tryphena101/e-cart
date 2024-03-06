@@ -1,0 +1,28 @@
+
+
+ .prod-img {
+   width: 550px !important;
+   height: 102px !important;;
+   /* background: #FF4100 !important;; */
+   border-radius: 16px !important;
+   margin-top: 0px !important;
+   margin-left: -110px !important;
+}
+
+.choose-sze {
+  font-family: 'Nimbus Sans L' !important;
+  font-size: 0px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 11px 18px !important;
+  gap: 9px !important;
+
+  position: absolute;
+  width: 190px !important;
+  height: 45px !important;
+  background-size: auto !important;
+  left: 359px !important;
+  top: 658px !important;
+}
