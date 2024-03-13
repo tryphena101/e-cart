@@ -54,8 +54,19 @@ export const CartProvider = ({children}) => {
     }
   ])
 
+/**
+ * Canvas functions
+ */
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <CartContext.Provider value={{productList}}>
+    <CartContext.Provider value={{
+      productList,
+      handleClose,
+      handleShow,
+      show}}>
       {children}
     </CartContext.Provider>
   )

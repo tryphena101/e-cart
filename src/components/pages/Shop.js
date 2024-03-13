@@ -3,6 +3,7 @@
 //import { Products } from './assets/Products';
 import React, { useContext } from 'react';
 import { CustomCards } from './assets/CustomCards';
+import  Cart  from './Cart.tsx';
 import CartContext from './context/CartContext.tsx';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -20,6 +21,8 @@ function Shop() {
   const {productList} = useContext(CartContext)
 
   return (
+  <>
+    <Cart></Cart>
     <div className = 'App-header'>
     <Container>
       <Row>
@@ -29,6 +32,7 @@ function Shop() {
     </Row>
     </Container>
     </div>
+  </>
   )
 }
 export default Shop;
