@@ -13,7 +13,9 @@ import CartContext from '../context/CartContext.tsx';
 
 export function CustomCards({product}) {
 
-  const { selectedItem, onChange, cartCount, incrementItem  } = useContext(CartContext)
+  const { selectedItem, onChange, addProductToCart, productList } = useContext(CartContext)
+  
+
 
   return (
         <div class="container">
@@ -28,15 +30,14 @@ export function CustomCards({product}) {
                   {product.desc}
                 </Card.Text>
                       <Form.Select aria-label="item select" style={styles.select}
-                            value={selectedItem}
-                            onChange={onChange}>
+                            onChange={(e) => selectedItem(e, true)}>
                          <option>Choose Size</option>
-                         <option value= {product.id}>S</option>
-                         <option value= {product.id}>M</option>
-                         <option value= {product.id}>L</option>
+                         <option value= {product.id}>SMALL</option>
+                         <option value= {product.id}>MEDIUM</option>
+                         <option value= {product.id}>LARGE</option>
                         </Form.Select>
                           <Button variant="primary" style={styles.button}
-                                  onClick ={incrementItem}> Add to Cart</Button>
+                                  onClick ={(e) => {addProductToCart(productList)}}> Add to Cart</Button>
               </Card.Body>
            </Card>
           </div>

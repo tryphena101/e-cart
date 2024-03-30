@@ -1,5 +1,5 @@
 // For the app to pass data from parent to child components directly without having to pass through other components and make the code difficult to refactor.
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 
 interface ContextTypeInterface {
     id: number;
@@ -62,24 +62,45 @@ export const CartProvider = ({children}) => {
   const handleShow = () => setShow(true);
 
   /**
-    * Select Item function
+    * Capturing size selection of item and adding it as key-value pair to productList
     */
-  const [selectedItem, setSelectedItem] = useState()
-  const onChange = (e) => {
-    setSelectedItem(e.target.value)
-    console.log(e.target.value)
+  const [eventVal, setEventVal] = useState<number>()
+  const selectedItem = (e: { target: {value: number}}, updateProductList: any) =>
+  {
+    const newArr = [...productList];
+    e.preventDefault();
+    setEventVal(e.target.value)
+    newArr.map((item) => {
+      if(item.id == e.target.value)
+      {
+        item['size'] = e.nativeEvent.target[e.target.selectedIndex].text;
+        setProductList(newArr)
+        console.log(item["size"] + ' ' + item["id"])
+        console.log(eventVal)
+      }
+    })
   }
+
+
+  /**
+    *Add Product to Cart
+    */
+    const [cartItems, setCartItems] = useState<[]>([]);
+    const addProductToCart = ( newArr: ProductInterface ) => {
+      setCartItems(newArr.filter((item) => { return item.id == eventVal ? item: null}))
+      console.log(cartItems)
+    }
+
 
   /**
     * Cart Item Counter
     */
-  const [cartCount, setCartCount] = useState(0)
-  const incrementItem = () => {
-    if (onChange) {
-      setCartCount(cartCount + 1)
-      console.log(cartCount);
-    }
-    }
+    const [quantity, setQuantity] = useState(0)
+    useEffect(() => {
+        if(cartItems.length) {
+          setQuantity(quantity + 1)
+        }
+    }, [cartItems])
 
 
   return (
@@ -89,9 +110,8 @@ export const CartProvider = ({children}) => {
       handleShow,
       show,
       selectedItem,
-      onChange,
-      cartCount,
-      incrementItem}}>
+      addProductToCart,
+      quantity}}>
       {children}
     </CartContext.Provider>
   )

@@ -12,7 +12,7 @@ import './Header.css';
 
 function Header() {
 
-  const { handleShow, cartCount } = useContext(CartContext)
+  const { handleShow, quantity } = useContext(CartContext)
   return (
           <nav className="App-nav">
             <div className="nav-box">
@@ -32,7 +32,7 @@ function Header() {
                           </Link>
                         </div>
                         <Button variant="outline-primary" onClick={handleShow}>
-                            <img src={shopicon} className ="cart"/>({cartCount})
+                            <img src={shopicon} className ="cart"/>({quantity})
                         </Button>
 
             </div>
