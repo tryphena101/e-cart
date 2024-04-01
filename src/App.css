@@ -1,0 +1,211 @@
+.App {
+  text-align: center;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+@font-face {
+font-family: "RightGrotesk";
+src: local("RightGrotesk-CompactBlack"),
+ url("./components/fonts/RightGrotesk/RightGrotesk-CompactBlack.otf") format("OpenType");
+font-weight: bold;
+}
+
+@font-face {
+  font-family: "NimbusSan";
+  src: local("NimbusSanL-Reg"),
+  url("./components/fonts/NimbusSan/NimbusSanL-Reg.otf");
+font-weight: bold;
+}
+
+/* Body */
+.App-header {
+  background: #FDBEBA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/*End Body */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navigation */
+
+.App-nav {
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+}
+
+.nav-box {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+
+  background: #FFA900;
+  border-bottom: 1px solid #FF4100;
+}
+
+.font-face-rg {
+ font-family: "RightGrotesk";
+}
+
+.text-style {
+
+  /* shadow_header */
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFA900;
+
+  /* SHIRTS */
+  -webkit-text-stroke: 2px #FF4100;
+  /* border: 2px solid #FF4100; */
+  /* SHADOW */
+
+  text-shadow: 3px 3px 0px #FF4100;
+  }
+
+  .hypdshirts {
+    position: absolute;
+    width: 236px;
+    height: 58px;
+    left: 22px;
+    top: 0px;
+  }
+
+  .shop {
+    position: absolute;
+    width: 102px;
+    height: 58px;
+    left: 1250px;
+    top: 0px;
+  }
+
+  .cart {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 1382px;
+    top: 13px;
+  }
+
+  /* BODY */
+
+  .font-face-ns {
+    font-family: "NimbusSan";
+  }
+
+  .title-style {
+    position: absolute;
+    width: 486px;
+    height: 404px;
+    left: 477px;
+    top: -20px;
+
+    font-family: 'Right Grotesk';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 115px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFA900;
+
+    -webkit-text-stroke: 2px #FF4100;
+    text-shadow: 9px 6px 0px #FF4100;
+  }
+
+  .shop-desc {
+    position: absolute;
+    width: 628px;
+    height: 84px;
+    left: 422px;
+    top: 410px;
+
+    font-family: 'Nimbus Sans L';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #FF4100;
+  }
+
+  .shop-link {
+    position: absolute;
+    width: 220px;
+    height: 88.35px;
+    left: 620px;
+    top: 525px;
+
+  }
+
+  .swirlylink {
+    position: inherit;
+    left: 10.06%;
+    right: 41%;
+    top: 75%;
+    bottom: 30.73%;
+  }
+
+  .text-link {
+    position: inherit;
+    width: 77px;
+    height: 29px;
+    left: 90px;
+    top: 80px;
+    /* Subheader */
+
+    font-family: 'Right Grotesk';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    letter-spacing: 0.05em;
+
+    color: #FF4100;
+  }
