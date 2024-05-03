@@ -13,8 +13,8 @@ import CartContext from '../context/CartContext.tsx';
 
 export function CustomCards({product}) {
 
-  const { selectedItem, onChange, addProductToCart, productList } = useContext(CartContext)
-  
+  const { increaseQuantity, decreaseQuantity, addProductToCart, productList } = useContext(CartContext)
+
 
 
   return (
@@ -29,15 +29,14 @@ export function CustomCards({product}) {
                 <Card.Text style={styles.desc}>
                   {product.desc}
                 </Card.Text>
-                      <Form.Select aria-label="item select" style={styles.select}
-                            onChange={(e) => selectedItem(e, true)}>
-                         <option>Choose Size</option>
-                         <option value= {product.id}>SMALL</option>
-                         <option value= {product.id}>MEDIUM</option>
-                         <option value= {product.id}>LARGE</option>
-                        </Form.Select>
+                <div style = {styles.quantity}>
+                    Quantity: {product.quantity > 0 ? product.quantity : null}
+                    </div>
+                    <Button variant="primary" style={styles.add} value={product.id} onClick = {(e) => increaseQuantity(e, false)}>+</Button>
+                    <Button variant="primary" style={styles.subtract} value={product.id} onClick = {(e) => decreaseQuantity(e, true)}>-</Button>
+
                           <Button variant="primary" style={styles.button}
-                                  onClick ={(e) => {addProductToCart(productList)}}> Add to Cart</Button>
+                                  onClick ={(e) => { addProductToCart(productList) }}> Add to Cart</Button>
               </Card.Body>
            </Card>
           </div>
@@ -69,7 +68,6 @@ const styles = {
   },
 
   title: {
-    // margin: 50,
     fontFamily: 'Right Grotesk',
     fontStyle: 'normal',
     fontWeight: 900,
@@ -101,7 +99,27 @@ const styles = {
     color: '#FF4100'
   },
 
-  select: {
+  quantity: {
+    fontFamily: 'Nimbus Sans L',
+    fontWeight: 400,
+    fontSize: 15,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 11,
+    gap: 9,
+
+    position: 'absolute',
+    width: 140,
+    height: 0,
+    paddingTop: 0,
+    paddingBottom: 0,
+    left: 0,
+    top: 415,
+  },
+
+  add: {
     fontFamily: 'Nimbus Sans L',
     display: 'flex',
     flexDirection: 'row',
@@ -111,18 +129,42 @@ const styles = {
     gap: 9,
 
     position: 'absolute',
-    width: 190,
-    height: 35,
+    // width: 40,
+    // height: 35,
     paddingTop: 0,
     paddingBottom: 0,
     left: 80,
     top: 415,
 
-    background: '#FFFFFF',
+
     border: 1.3,
     borderRadius: 8,
     backgroundSize: 'auto'
 
+
+  },
+
+  subtract: {
+    fontFamily: 'Nimbus Sans L',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 11,
+    gap: 9,
+
+    position: 'absolute',
+    // width: 40,
+    // height: 35,
+    paddingTop: 0,
+    paddingBottom: 0,
+    left: 180,
+    top: 415,
+
+
+    border: 1.3,
+    borderRadius: 8,
+    backgroundSize: 'auto'
 
   },
 

@@ -1,5 +1,5 @@
 // For the app to pass data from parent to child components directly without having to pass through other components and make the code difficult to refactor.
-import React, { createContext, useState, useEffect } from 'react'
+import React, { createContext, useState, useEffect, setState } from 'react'
 
 interface ContextTypeInterface {
     id: number;
@@ -55,6 +55,47 @@ export const CartProvider = ({children}) => {
   ])
 
 /**
+* Custom Quantity Increase/Decrease function
+*/
+
+const increaseQuantity = (e: { target: { value: number } }, updateProductList: any) =>
+ {
+  const newArr = [...productList];
+  newArr.map((item) => {
+    if(item.id == e.target.value)
+    {
+      item.quantity = item.quantity + 1;
+      setProductList(newArr);
+      console.log(e.target.value)
+    }
+  });
+
+  if(updateProductList) {
+    addProductToCart(productList)
+  }
+}
+
+const decreaseQuantity = (e: { target: { value: number } }, updateProductList: any) =>
+ {
+  const newArr = [...productList];
+  newArr.map((item) => {
+    if(item.id == e.target.value)
+    {
+      if(item.quantity >= 1) {
+        item.quantity = item.quantity - 1;
+        setProductList(newArr);
+        console.log(e.target.value)
+      }
+
+    }
+  });
+
+  if(updateProductList) {
+    addProductToCart(productList)
+  }
+}
+
+/**
  * Canvas functions
  */
   const [show, setShow] = useState(false);
@@ -62,59 +103,56 @@ export const CartProvider = ({children}) => {
   const handleShow = () => setShow(true);
 
   /**
-    * Capturing size selection of item and adding it as key-value pair to productList
+    *Add to Cart functionality
     */
-  const [eventVal, setEventVal] = useState<number>()
-  const selectedItem = (e: { target: {value: number}}, updateProductList: any) =>
-  {
-    const newArr = [...productList];
-    e.preventDefault();
-    setEventVal(e.target.value)
-    newArr.map((item) => {
-      if(item.id == e.target.value)
-      {
-        item['size'] = e.nativeEvent.target[e.target.selectedIndex].text;
-        setProductList(newArr)
-        console.log(item["size"] + ' ' + item["id"])
-        console.log(eventVal)
+    const [cartItems, setCartItems] = useState([]);
+
+    const addProductToCart = (productList) => {
+        setCartItems(productList.filter((item) => item.quantity > 0 ? item:null))
       }
-    })
-
-
-  }
-
-
-  /**
-    *Pass selected item value to 'add to cart' button
-    */
-    const [cartItems, setCartItems] = useState<[]>([]);
-    const addProductToCart = ( newArr: ProductInterface ) => {
-      setCartItems(newArr.filter((item) => { return item.id == eventVal ? item: null}))
-    }
-
 
   /**
     * Cart Item Counter
     */
     const [quantity, setQuantity] = useState(0)
     useEffect(() => {
-        if(cartItems.length) {
-          setQuantity(quantity + 1)
-        }
+
+      if(cartItems.length) {
+
+        setQuantity(cartItems.length)
+        let total = 0
+        cartItems.map((item) => {
+          total += item.quantity * item.price
+        });
+
+        setTotalPrice(total)
+
+      } else {
+        setQuantity(cartItems.length)
+        setTotalPrice(0)
+      }
+
     }, [cartItems])
 
+    /**
+      * Total Price Calculate function
+      */
+
+    const [totalPrice, setTotalPrice] = useState(0)
 
 
   return (
     <CartContext.Provider value={{
       productList,
+      increaseQuantity,
+      decreaseQuantity,
       handleClose,
       handleShow,
       show,
-      selectedItem,
       addProductToCart,
       quantity,
-      cartItems}}>
+      cartItems,
+      totalPrice}}>
       {children}
     </CartContext.Provider>
   )

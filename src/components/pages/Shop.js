@@ -22,7 +22,7 @@ function Shop() {
 
   return (
   <>
-    <Cart></Cart>
+    <Cart/>
     <div className = 'App-header'>
     <Container>
       <Row>
