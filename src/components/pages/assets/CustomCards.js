@@ -30,11 +30,13 @@ export function CustomCards({product}) {
                   {product.desc}
                 </Card.Text>
                 <div style = {styles.quantity}>
-                    Quantity: {product.quantity > 0 ? product.quantity : null}
-                    </div>
-                    <Button variant="primary" style={styles.add} value={product.id} onClick = {(e) => increaseQuantity(e, false)}>+</Button>
-                    <Button variant="primary" style={styles.subtract} value={product.id} onClick = {(e) => decreaseQuantity(e, true)}>-</Button>
 
+                    </div>
+                    <div style={styles.quantitySpace}>
+                    <Button variant="primary" style={styles.add} value={product.id} onClick = {(e) => increaseQuantity(e, false)}>+</Button>
+                    <div style={styles.quantity}>{product.quantity > 0 ? product.quantity : null}</div>
+                    <Button variant="primary" style={styles.subtract} value={product.id} onClick = {(e) => decreaseQuantity(e, true)}>-</Button>
+                    </div>
                           <Button variant="primary" style={styles.button}
                                   onClick ={(e) => { addProductToCart(productList) }}> Add to Cart</Button>
               </Card.Body>
@@ -51,8 +53,8 @@ const styles = {
     height: 312,
     left: 50,
     top: 100,
-    margin: 100,
-    gap: 20,
+    margin: 150,
+    gap: 130,
     background: '#FF4100',
     border: 0
 
@@ -115,67 +117,61 @@ const styles = {
     height: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    left: 0,
-    top: 415,
+    left: 130,
+    top: 430,
+    color: '#FF4100'
   },
 
   add: {
     fontFamily: 'Nimbus Sans L',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 11,
-    gap: 9,
+    // textAlign: 'center',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',
+    // alignItems: 'center',
+
 
     position: 'absolute',
-    // width: 40,
-    // height: 35,
-    paddingTop: 0,
-    paddingBottom: 0,
+    lineHeight: 0,
+    boxSizing: 'border box',
+    width: 32,
+    height: 30,
     left: 80,
     top: 415,
-
-
-    border: 1.3,
-    borderRadius: 8,
-    backgroundSize: 'auto'
+    background: '#FF4100',
+    borderColor: '#FF4100'
 
 
   },
 
   subtract: {
     fontFamily: 'Nimbus Sans L',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: 11,
-    gap: 9,
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'space-between',
+    // alignItems: 'center',
 
     position: 'absolute',
-    // width: 40,
-    // height: 35,
-    paddingTop: 0,
-    paddingBottom: 0,
+    lineHeight: 0,
+    boxSizing: 'border box',
+    width: 32,
+    height: 30,
     left: 180,
     top: 415,
+    background: '#FF4100',
+    borderColor: '#FF4100'
 
 
-    border: 1.3,
-    borderRadius: 8,
-    backgroundSize: 'auto'
+    // border: 1.3,
+    // borderRadius: 8,
+    // backgroundSize: 'auto'
 
   },
 
-  toggle: {
-    background: 'white',
-    color: 'black',
-    borderColor: 'white',
-    width: 100,
-    height: 35,
-    fontSize: 14
-
+  quantitySpace: {
+    position: 'relative',
+    left: 0,
+    top: -10
   },
 
   button: {
@@ -193,7 +189,7 @@ const styles = {
     width: 238,
     height: 34,
     left: 50,
-    top: 460,
+    top: 480,
 
     background: '#FFA900',
     border: '1',
@@ -202,63 +198,3 @@ const styles = {
     borderRadius: 8
   }
 }
-
-// const StyledCard = styled.div`
-//     width: 345px;
-//     height: 312px;
-//     left: 50px;
-//     top: 100px;
-//     margin: 100px;
-//     gap: 20px;
-//     background: #FF4100;
-//     border: 0px;
-//   `;
-//
-//   const Product = styled.div`
-//     position: absolute;
-//     width: 550px;
-//     height: 338px;
-//     left: -100px;
-//     bottom: -3px;
-//
-//   `};
-
-
-
-//   const Title {
-//     position: 'absolute',
-//     left: 5,
-//     top: 350,
-//
-//     fontFamily: 'Nimbus Sans L',
-//     fontStyle: 'normal',
-//     fontWeight: 400,
-//     fontSize: 15,
-//     textAlign: 'justify',
-//     letterSpacing: 0.05,
-//
-//     color: '#FF4100'
-//   },
-//
-//   dropdown: {
-//     fontFamily: 'Nimbus Sans L',
-//     // fontSize: 5,
-//     display: 'flex',
-//     flexDirection: 'row',
-//     justifyContent: 'space-between',
-//     alignItems: 'center',
-//     padding: 11,
-//     gap: 9,
-//
-//     position: 'absolute',
-//     width: 99,
-//     height: 45,
-//     minHeight: 35,
-//     paddingTop: 0,
-//     paddingBottom: 0,
-//     left: 100,
-//     top: 415
-//
-//
-//   }
-// }

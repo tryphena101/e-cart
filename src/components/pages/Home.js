@@ -9,6 +9,7 @@ function Home() {
   return (
     <>
     <Cart></Cart>
+    <body>
     <header className="App-header">
     <div className = "title-style">
       <div className ="font-face-rg">
@@ -29,6 +30,7 @@ function Home() {
           </div>
         </p>
     </header>
+    </body>
     </>
 
 

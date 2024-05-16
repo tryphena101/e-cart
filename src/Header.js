@@ -31,8 +31,9 @@ function Header() {
                             SHOP
                           </Link>
                         </div>
-                        <Button variant="outline-primary" onClick={handleShow}>
-                            <img src={shopicon} className ="cart"/>({quantity})
+                        <Button onClick={handleShow} className ='handleShow'>
+                            <img src={shopicon} className ="cart"/>
+                            <div className = 'addCart'>({quantity})</div>
                         </Button>
 
             </div>

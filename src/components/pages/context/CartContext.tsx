@@ -38,7 +38,7 @@ export const CartProvider = ({children}) => {
       "quantity": 0,
       "name": "Black Shorts",
       "price": 15,
-      "desc": "Front pocket-area print and full back print on a super soft Bella+Canvas 3001 black unisex shorts with side pocket.",
+      "desc": "Front pocket-area print on a super soft Bella+Canvas 3001 black unisex shorts.",
       "img": "/imgs/black shorts.png"
 
 
@@ -48,7 +48,7 @@ export const CartProvider = ({children}) => {
       "quantity": 0,
       "name": "White Shorts",
       "price": 15,
-      "desc": "Front pocket-area print and full back print on a super soft Bella+Canvas 3001 white unisex shorts with side pocket.",
+      "desc": "Front pocket-area print on a super soft Bella+Canvas 3001 white unisex shorts.",
       "img": "/imgs/white shorts.png"
 
     }
@@ -107,7 +107,7 @@ const decreaseQuantity = (e: { target: { value: number } }, updateProductList: a
     */
     const [cartItems, setCartItems] = useState([]);
 
-    const addProductToCart = (productList) => {
+    const addProductToCart = (productList: ProductInterface) => {
         setCartItems(productList.filter((item) => item.quantity > 0 ? item:null))
       }
 
