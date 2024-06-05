@@ -1,0 +1,468 @@
+/* BODY */
+
+.App-header {
+  background: #FDBEBA;
+  position: relative;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+  /* min-width: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+@font-face {
+font-family: "RightGrotesk";
+src: local("RightGrotesk-CompactBlack"),
+ url("../fonts/RightGrotesk/RightGrotesk-CompactBlack.otf") format("OpenType");
+font-weight: bold;
+}
+
+@font-face {
+  font-family: "NimbusSan";
+  src: local("NimbusSanL-Reg"),
+  url("../fonts/NimbusSan/NimbusSanL-Reg.otf");
+font-weight: bold;
+}
+
+
+/* PRODUCT SPACE */
+
+/* .product-space-1 {
+  position: absolute;
+  width: 431px;
+  height: 354px;
+  left: 233px;
+  top: 233px;
+
+} */
+
+.shirt {
+  position: absolute;
+  width: 345px;
+  height: 312px;
+  left: 276px;
+  top: 246px;
+
+  background: #FF4100;
+  border-radius: 16px;
+}
+
+.black-shirt {
+  position: absolute;
+  width: 550px;
+  height: 338px;
+  left: -100px;
+  top: -15px;
+}
+
+.product-title-1 {
+  position: absolute;
+  width: 130px;
+  height: 29px;
+  left: 392px;
+  top: 558px;
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+
+  color: #FF4100;
+
+}
+
+.prod-desc-1 {
+  position: absolute;
+  width: 407px;
+  height: 36px;
+  left: 245px;
+  top: 600px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+}
+
+.choose-sze {
+  font-family: 'Nimbus Sans L';
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  gap: 9px;
+
+  position: absolute;
+  width: 190px;
+  height: 45px;
+  left: 359px;
+  top: 658px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Blues/Gray2 */
+
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+}
+
+
+.add-to-cart {
+  position: absolute;
+  width: 93px;
+  height: 19px;
+  left: 402px;
+  top: 750px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 238px;
+  height: 34px;
+  left: 330px;
+  top: 721px;
+
+  background: #FFA900;
+  border: 1px solid #FF4100;
+  border-radius: 8px;
+}
+
+
+.shirt-2 {
+  position: absolute;
+  width: 345px;
+  height: 312px;
+  left: 815px;
+  top: 246px;
+
+  background: #FF4100;
+  border-radius: 16px;
+}
+
+.white-shirt {
+  position: absolute;
+  width: 550px;
+  height: 338px;
+  left: -100px;
+  top: -15px;
+}
+
+.product-title-2 {
+  position: absolute;
+  width: 130px;
+  height: 29px;
+  left: 925px;
+  top: 558px;
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+/* identical to box height */
+
+
+  color: #FF4100
+}
+
+.prod-desc-2 {
+  position: absolute;
+  width: 407px;
+  height: 36px;
+  left: 795px;
+  top: 600px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+}
+
+.choose-sze-1 {
+  font-family: 'Nimbus Sans L';
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  gap: 9px;
+
+  position: absolute;
+  width: 190px;
+  height: 45px;
+  left: 910px;
+  top: 658px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Blues/Gray2 */
+
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+}
+
+.add-to-cart-1 {
+  position: absolute;
+  width: 93px;
+  height: 19px;
+  left: 952px;
+  top: 750px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 238px;
+  height: 34px;
+  left: 880px;
+  top: 721px;
+
+  background: #FFA900;
+  border: 1px solid #FF4100;
+  border-radius: 8px;
+}
+
+.shorts-1 {
+  position: absolute;
+  width: 345px;
+  height: 312px;
+  left: 276px;
+  top: 800px;
+
+  background: #FF4100;
+  border-radius: 16px;
+}
+
+.black-shorts {
+  position: absolute;
+  width: 325px;
+  height: 230px;
+  left: 10px;
+  top: 40px;
+}
+
+.product-title-3 {
+  position: absolute;
+  width: 130px;
+  height: 29px;
+  left: 392px;
+  top: 1110px;
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+
+  color: #FF4100;
+}
+
+.prod-desc-3 {
+  position: absolute;
+  width: 407px;
+  height: 36px;
+  left: 245px;
+  top: 1160px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+}
+
+.choose-sze-2 {
+  font-family: 'Nimbus Sans L';
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  gap: 9px;
+
+  position: absolute;
+  width: 190px;
+  height: 45px;
+  left: 359px;
+  top: 1240px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Blues/Gray2 */
+
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+}
+
+.add-to-cart-2 {
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 238px;
+  height: 34px;
+  left: 330px;
+  top: 1305px;
+
+  background: #FFA900;
+  border: 1px solid #FF4100;
+  border-radius: 8px;
+}
+
+.shorts-2 {
+  position: absolute;
+  width: 345px;
+  height: 312px;
+  left: 815px;
+  top: 800px;
+
+  background: #FF4100;
+  border-radius: 16px;
+}
+
+.white-shorts {
+  position: absolute;
+  width: 325px;
+  height: 230px;
+  left: 10px;
+  top: 40px;
+}
+
+.product-title-4 {
+  position: absolute;
+  width: 130px;
+  height: 29px;
+  left: 925px;
+  top: 1110px;
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+
+  color: #FF4100;
+}
+
+.prod-desc-4 {
+  position: absolute;
+  width: 407px;
+  height: 36px;
+  left: 795px;
+  top: 1160px;
+
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+}
+
+.choose-sze-3 {
+  font-family: 'Nimbus Sans L';
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 18px;
+  gap: 9px;
+
+  position: absolute;
+  width: 190px;
+  height: 45px;
+  left: 910px;
+  top: 1240px;
+
+  /* White */
+
+  background: #FFFFFF;
+  /* Blues/Gray2 */
+
+  border: 1.3px solid #B8BBC2;
+  border-radius: 8px;
+}
+
+.add-to-cart-3 {
+  font-family: 'Nimbus Sans L';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: #FF4100;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 238px;
+  height: 34px;
+  left: 880px;
+  top: 1305px;
+
+  background: #FFA900;
+  border: 1px solid #FF4100;
+  border-radius: 8px;
+}

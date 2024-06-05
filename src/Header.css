@@ -1,0 +1,167 @@
+@font-face {
+font-family: "RightGrotesk";
+src: local("RightGrotesk-CompactBlack"),
+ url("./components/fonts/RightGrotesk/RightGrotesk-CompactBlack.otf") format("OpenType");
+font-weight: bold;
+}
+
+/* Navigation */
+
+.App-nav {
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+}
+
+.nav-box {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1535px;
+  height: 77px;
+  left: 0px;
+  top: 0px;
+
+  background: #FFA900;
+  border-bottom: 1px solid #FF4100;
+}
+
+.font-face-rg {
+ font-family: "RightGrotesk";
+}
+
+.text-style {
+
+  /* shadow_header */
+
+  font-family: 'Right Grotesk';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #FFA900;
+
+  /* SHIRTS TEXT */
+  -webkit-text-stroke: 2px #FF4100;
+  /* border: 2px solid #FF4100; */
+  /* SHADOW */
+
+  text-shadow: 3px 3px 0px #FF4100;
+  }
+
+  .hypdshirts {
+    position: absolute;
+    width: 236px;
+    height: 58px;
+    left: 22px;
+    top: 0px;
+  }
+
+  .active {
+    text-decoration: none;
+    color: inherit;
+    -webkit-text-stroke: inherit;
+  }
+
+  .shop {
+    position: absolute;
+    width: 102px;
+    height: 58px;
+    left: 1240px;
+    top: 0px;
+  }
+
+  .shop-active {
+    text-decoration: none;
+    color: inherit;
+    -webkit-text-stroke: inherit;
+  }
+
+  .handleShow {
+    border: none;
+    left: 650px;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    color: #FF4100;
+    background-color: transparent;
+    box-shadow: none;
+    outline: 0;
+    background-color:#FFA900;
+  }
+
+  /* .handleShow:hover {
+    cursor: default;
+  } */
+
+  .handleShow:active
+   {
+    /* color: #FFA900;
+    box-shadow: none !important;
+    background-color: transparent; */
+    box-shadow: none;
+    outline: 0;
+    background-color:#FFA900;
+  }
+
+  .handleShow:focus {
+     background-color:#FFA900 !important;
+  }
+
+
+  .cart {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: -40px;
+    top: -16px;
+  }
+
+  .cart:hover {
+    text-decoration: none;
+  }
+
+  .addCart {
+    position: absolute;
+    font-size: 43px;
+    font-family: 'RightGrotesk';
+    font-weight: 100;
+    letter-spacing: 5%;
+    text-align: center;
+    left: 10px;
+    top: -32px;
+    border: 0;
+    text-shadow: 3px 3px 0px #FF4100;
+    -webkit-text-stroke: 2px #FF4100;
+    color:#FFA900;
+  }
+
+  .addCart:focus,
+  .addCart:active:focus:not(:disabled):not(.disabled) {
+    box-shadow: none;
+    outline: 0;
+    background-color:inherit;
+  }
+
+  .btn-primary:hover,
+  /* .btn-primary:focus, */
+  .btn-primary:active,
+/* .btn-primary:active:focus:not(:disabled):not(.disabled),
+.btn:focus,  */
+.btn:active, .btn:hover, .btn:visited, .btn-primary:visited {
+    box-shadow: none;
+    outline: 0;
+    background-color:inherit;
+    /* color:#FFA900; */
+
+    /* border: 2px solid #FF4100; */
+    /* SHADOW */
+
+
+  }
