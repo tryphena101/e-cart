@@ -1,5 +1,9 @@
 // For the app to pass data from parent to child components directly without having to pass through other components and make the code difficult to refactor.
 import React, { createContext, useState, useEffect, setState } from 'react';
+import blackshirt from './prod_images/black shirt.png';
+import whiteshirt from './prod_images/white shirt.png';
+import blackshorts from './prod_images/black shorts.png';
+import whiteshorts from './prod_images/white shorts.png';
 
 interface ContextTypeInterface {
     id: number;
@@ -23,7 +27,7 @@ export const CartProvider = ({children}) => {
       "name": "Black T-Shirt",
       "price": 34,
       "desc": "Front pocket-area print and full back print on a super soft Bella+Canvas 3001 black unisex t-shirt.",
-      "img": "/imgs/black shirt.png"
+      "img": (blackshirt)
     },
     {
       "id": 312345,
@@ -31,7 +35,7 @@ export const CartProvider = ({children}) => {
       "name": "White T-Shirt",
       "price": 34,
       "desc": "Front pocket-area print and full back print on a super soft Bella+Canvas 3001 white unisex t-shirt.",
-      "img": "/imgs/white shirt.png"
+      "img": (whiteshirt)
     },
     {
       "id": 678890,
@@ -39,7 +43,7 @@ export const CartProvider = ({children}) => {
       "name": "Black Shorts",
       "price": 15,
       "desc": "Front pocket-area print on a super soft Bella+Canvas 3001 black unisex shorts.",
-      "img": "/imgs/black shorts.png"
+      "img": (blackshorts)
 
 
     },
@@ -49,7 +53,7 @@ export const CartProvider = ({children}) => {
       "name": "White Shorts",
       "price": 15,
       "desc": "Front pocket-area print on a super soft Bella+Canvas 3001 white unisex shorts.",
-      "img": "/imgs/white shorts.png"
+      "img": (whiteshorts)
 
     }
   ])
