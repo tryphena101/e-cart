@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import NavTest from './NavTest';
 import RouteSwitch from './RouteSwitch';
@@ -11,10 +12,10 @@ function App() {
   return (
     <div>
     <CartProvider>
-    <Router>
+    <BrowserRouter>
     <RouteSwitch />
     <Header />
-    </Router>
+    </BrowserRouter>
     </CartProvider>
     </div>
 

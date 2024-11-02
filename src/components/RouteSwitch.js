@@ -1,4 +1,5 @@
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+// import {BrowserRouter as Router, Routes, Route, redirect } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './components/pages/Home'
 import Shop from './components/pages/Shop'
@@ -6,13 +7,13 @@ import Shop from './components/pages/Shop'
 
 function RouteSwitch() {
     return (
-      <Router>
+      <BrowserRouter>
         <Header />
         <Routes>
-          <Route path = '/' element={<Home />} />
+          <Route exact path = '/' element={<Home />}/>
           <Route path = '/shop' element={<Shop />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
 
     );
   }
