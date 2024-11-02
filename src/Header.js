@@ -19,7 +19,7 @@ function Header() {
               <div className ="text-style">
                 <div className ="font-face-rg">
                   <div className="hypdshirts">
-                      <Link to = '/home' className = 'active'>
+                      <Link to = '/' className = 'active'>
                         HYPDSHIRTS
                           </Link>
 
