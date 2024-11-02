@@ -10,7 +10,7 @@ function RouteSwitch() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path = '/' element={<Home />}/>
+          <Route exact path = '/home' element={<Home />}/>
           <Route path = '/shop' element={<Shop />} />
         </Routes>
       </BrowserRouter>
