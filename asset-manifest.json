@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "./e-cart/static/css/main.712ee973.css",
-    "main.js": "./e-cart/static/js/main.19a84f2f.js",
-    "static/js/787.44c81a1f.chunk.js": "./e-cart/static/js/787.44c81a1f.chunk.js",
-    "static/media/white shirt.png": "./e-cart/static/media/white shirt.c7359d11cd179cd73d7c.png",
-    "static/media/black shirt.png": "./e-cart/static/media/black shirt.b252116b6eedfae8fb25.png",
-    "static/media/white shorts.png": "./e-cart/static/media/white shorts.af49f87c2053f7c316fc.png",
-    "static/media/black shorts.png": "./e-cart/static/media/black shorts.db602b3853c8c5c5b6d1.png",
-    "static/media/RightGrotesk-CompactBlack.otf": "./e-cart/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
-    "static/media/NimbusSanL-Reg.otf": "./e-cart/static/media/NimbusSanL-Reg.a520cb1a50f044f5d58c.otf",
-    "index.html": "./e-cart/index.html",
-    "main.712ee973.css.map": "./e-cart/static/css/main.712ee973.css.map",
-    "main.19a84f2f.js.map": "./e-cart/static/js/main.19a84f2f.js.map",
-    "787.44c81a1f.chunk.js.map": "./e-cart/static/js/787.44c81a1f.chunk.js.map"
+    "main.css": "/e-cart/static/css/main.06265d11.css",
+    "main.js": "/e-cart/static/js/main.d625873f.js",
+    "static/js/787.44c81a1f.chunk.js": "/e-cart/static/js/787.44c81a1f.chunk.js",
+    "static/media/white shirt.png": "/e-cart/static/media/white shirt.c7359d11cd179cd73d7c.png",
+    "static/media/black shirt.png": "/e-cart/static/media/black shirt.b252116b6eedfae8fb25.png",
+    "static/media/white shorts.png": "/e-cart/static/media/white shorts.af49f87c2053f7c316fc.png",
+    "static/media/black shorts.png": "/e-cart/static/media/black shorts.db602b3853c8c5c5b6d1.png",
+    "static/media/RightGrotesk-CompactBlack.otf": "/e-cart/static/media/RightGrotesk-CompactBlack.965367bf710f347153cc.otf",
+    "static/media/NimbusSanL-Reg.otf": "/e-cart/static/media/NimbusSanL-Reg.a520cb1a50f044f5d58c.otf",
+    "index.html": "/e-cart/index.html",
+    "main.06265d11.css.map": "/e-cart/static/css/main.06265d11.css.map",
+    "main.d625873f.js.map": "/e-cart/static/js/main.d625873f.js.map",
+    "787.44c81a1f.chunk.js.map": "/e-cart/static/js/787.44c81a1f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.712ee973.css",
-    "static/js/main.19a84f2f.js"
+    "static/css/main.06265d11.css",
+    "static/js/main.d625873f.js"
   ]
 }
