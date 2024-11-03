@@ -25,7 +25,7 @@ function Home() {
         <p>
         <div className = "shop-link">
           <img src={swirlylink} className = "swirlylink" />
-        <Link to = '/shop' className = "text-link">
+        <Link to = '/e-cart/shop' className = "text-link">
         Shop now!
         </Link>
           </div>
