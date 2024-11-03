@@ -7,8 +7,8 @@ import Shop from './components/pages/Shop'
 function RouteSwitch () {
   return (
       <Routes>
-        <Route path = '/' element={<Home />} />
-        <Route path = '/shop' element={<Shop />} />
+        <Route path = '/e-cart/' element={<Home />} />
+        <Route path = '/e-cart/shop' element={<Shop />} />
       </Routes>
   )
 };
