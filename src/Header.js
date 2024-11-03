@@ -19,7 +19,7 @@ function Header() {
               <div className ="text-style">
                 <div className ="font-face-rg">
                   <div className="hypdshirts">
-                      <Link to = '/' className = 'active'>
+                      <Link to = '/e-cart/' className = 'active'>
                         HYPDSHIRTS
                           </Link>
 
@@ -27,7 +27,7 @@ function Header() {
 
                     </div>
                       <div className="shop">
-                        <Link to = '/shop' className = 'active'>
+                        <Link to = '/e-cart/shop' className = 'active'>
                             SHOP
                           </Link>
                         </div>
